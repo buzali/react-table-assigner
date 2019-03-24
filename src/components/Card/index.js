@@ -1,12 +1,30 @@
-import React from 'react';
-import { CardBody } from './Card.style';
+import React, {Component} from 'react';
+import { CardBody, Title, Fecha } from './Card.style';
 
-function Card({}){
-    return (
-        <CardBody>
+class Card extends Component{
+    constructor(props){
+        super(props);
+        this.state={
+            date:''
+        }
+    }
 
-        </CardBody>
-    )
+    componentDidMount(){
+        const fecha= new Date();
+        const date=fecha.toLocaleTimeString('es-MX');
+        this.setState({date})
+    }
+
+    render(){
+        const { title } = this.props;
+        const { date } = this.state;
+        return (
+            <CardBody>
+                <Title>{title}</Title>
+                <Fecha>{`Disponible desde ${date}`}</Fecha>
+            </CardBody>
+        )
+    }
 }
 
 export default Card;

@@ -11,12 +11,16 @@ export const Container = styled.div`
 
 export const Hora = styled.h2`
     text-align:center;
-    color:red;
+    color:white;
     margin:10px;
 `;
 
 export const Title = styled.h1`
     text-align:center;
-    color:red;
+    color:white;
     margin:10px;
+`;
+
+export const Logo = styled.img`
+    height:15vh;
 `;

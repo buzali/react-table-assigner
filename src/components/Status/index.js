@@ -32,7 +32,7 @@ class Status extends Component {
     borrar = () => {
         const { id } = this.props.match.params;
         db
-            .collection(`Cajas/${id}`)
+            .collection(`Cajas`)
             .doc(`${id}`)
             .delete();
     }

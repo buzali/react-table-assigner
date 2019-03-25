@@ -58,8 +58,8 @@ class App extends Component {
     const { items, time, loading } = this.state;
     return (
       <React.Fragment>
-        <Logo src='http://www.grupoaxo.com/facturacion/logo-axo.png' alt='' />
-        <Title>{'Venta Grupo Axo - Cajas Disponibles:'}</Title>
+        <Logo src={process.env.REACT_APP_IMGURL} alt='' />
+        <Title>{`Venta ${process.env.REACT_APP_TIENDA} - Cajas Disponibles:`}</Title>
         <Hora>{time}</Hora>
         <Container>
           {

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import { CardBody, Title, Fecha } from './Card.style';
 
 function Card({title,date}){

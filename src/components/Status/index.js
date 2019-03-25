@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Circle, Container, Title } from './Status.style';
 import { db } from '../../constants/Firebase';
+import { PulseLoader } from 'react-spinners';
 
 class Status extends Component {
     constructor(props) {
@@ -57,7 +58,7 @@ class Status extends Component {
                 {
                     loading
                     ?
-                    <h1>Cargando...</h1>
+                    <PulseLoader color='#36D7B7'/>
                     :
                     <Circle {...props}>
                     {

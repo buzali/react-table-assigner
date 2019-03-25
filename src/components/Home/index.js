@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import { Container, Hora, Title, Logo } from './Home.style';
 import Card from '../Card';
 import { db } from '../../constants/Firebase';
+import { PulseLoader } from 'react-spinners';
 
-
-
-class App extends Component {
+class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -65,7 +64,7 @@ class App extends Component {
           {
             loading
               ?
-              <h1>Cargando...</h1>
+              <PulseLoader color='#36D7B7'/>
               :
               <React.Fragment>
                 {
@@ -81,4 +80,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Home;

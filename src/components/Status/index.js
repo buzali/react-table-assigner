@@ -42,7 +42,7 @@ class Status extends Component {
         const { id } = this.props.match.params;
         const nombre = `Caja ${id}`;
         const fecha_cambio = new Date();
-        db.doc(`Cajas/${id}`).set({ nombre, fecha_cambio })
+        db.doc(`Cajas/${id}`).set({ nombre, fecha_cambio, transit:false })
     }
 
     render() {

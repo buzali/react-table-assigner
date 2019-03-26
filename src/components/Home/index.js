@@ -31,7 +31,9 @@ class Home extends Component {
         const data = doc.data();
         const title = data.nombre;
         const date = data.fecha_cambio;
-        return { title, date };
+        const transit=data.transit;
+        const id = doc.id;
+        return { title, date, id, transit };
       })
       this.setState({ items, loading:false });
     })

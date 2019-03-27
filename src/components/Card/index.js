@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { CardBody, Title, Fecha } from './Card.style';
 import TimeAgo from 'javascript-time-ago';
 import es from 'javascript-time-ago/locale/es-MX';
@@ -12,7 +12,7 @@ const timeAgo = new TimeAgo('es-MX');
 function Card({ id, title, date, transit }){
 
     const onClick=()=>{
-        db.doc(`Cajas/${id}`).set({ nombre:title, fecha_cambio:date, transit:true })
+        transit?db.doc(`Cajas/${id}`).set({ nombre:title, fecha_cambio:date, transit:false }):db.doc(`Cajas/${id}`).set({ nombre:title, fecha_cambio:date, transit:true })
     }
         const propsBody={ 
             transit,
